@@ -236,8 +236,40 @@ header {
   .form-label {
     position: relative;
 
-    &:hover {
+
+    &.active {
       z-index: 2;
+
+
+      .label-top {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px 10px 0 0;
+
+        border-bottom: none;
+
+        input {
+          border-radius: 10px 10px 0 0;
+          padding-left: 34px;
+        }
+      }
+
+      .label-list {
+        opacity: 1;
+        visibility: visible;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+
+        border-top: none;
+      }
+
+      .label-active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .label-arrow {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
 
     &:first-child {
@@ -249,12 +281,16 @@ header {
       width: 100%;
       position: relative;
       margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.0);
+      border-bottom: none;
+
 
       input {
         border-radius: 10px;
         padding: 15px;
         width: 100%;
         background: #282828;
+        transition: all .4s ease;
       }
     }
 
@@ -263,17 +299,42 @@ header {
       top: 50%;
       right: 15px;
       transform: translateY(-50%);
+      transition: all .4s ease;
+    }
+
+    .label-active {
+      transition: all .4s ease;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
     }
 
     .label-list {
       position: absolute;
       top: 100%;
       width: 100%;
-      border-radius: 10px;
+      border-radius: 0 0 10px 10px;
       padding: 12px 15px;
       background: #282828;
       opacity: 0;
       visibility: hidden;
+      transition: all .4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.0);
+      border-top: none;
+
+
+      &__item {
+        padding: 10px;
+        cursor: pointer;
+
+        &.disable {
+          display: none;
+        }
+
+      }
     }
   }
 

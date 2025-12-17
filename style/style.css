@@ -226,8 +226,31 @@ header .header-nav__item {
 .hero .form-label {
   position: relative;
 }
-.hero .form-label:hover {
+.hero .form-label.active {
   z-index: 2;
+}
+.hero .form-label.active .label-top {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+.hero .form-label.active .label-top input {
+  border-radius: 10px 10px 0 0;
+  padding-left: 34px;
+}
+.hero .form-label.active .label-list {
+  opacity: 1;
+  visibility: visible;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-top: none;
+}
+.hero .form-label.active .label-active {
+  opacity: 1;
+  visibility: visible;
+}
+.hero .form-label.active .label-arrow {
+  opacity: 0;
+  visibility: hidden;
 }
 .hero .form-label:first-child {
   grid-column: span 3;
@@ -237,28 +260,51 @@ header .header-nav__item {
   width: 100%;
   position: relative;
   margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: none;
 }
 .hero .form-label .label-top input {
   border-radius: 10px;
   padding: 15px;
   width: 100%;
   background: #282828;
+  transition: all 0.4s ease;
 }
 .hero .form-label .label-arrow {
   position: absolute;
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
+  transition: all 0.4s ease;
+}
+.hero .form-label .label-active {
+  transition: all 0.4s ease;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 .hero .form-label .label-list {
   position: absolute;
   top: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   padding: 12px 15px;
   background: #282828;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-top: none;
+}
+.hero .form-label .label-list__item {
+  padding: 10px;
+  cursor: pointer;
+}
+.hero .form-label .label-list__item.disable {
+  display: none;
 }
 .hero .button {
   position: relative;
