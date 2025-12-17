@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Golos+Text:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../assets/fonts/bebasneuecyrillic.ttf);
+}
+
+$font-family: "Golos Text", sans-serif;
+$third-family: "Bebas Neue", sans-serif;
+
+.desktop-logo {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 219px;
+  line-height: 110%;
+
+  @media (max-width: 1024px) {
+    font-size: 156px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 116px;
+  }
+
+  @media (max-width: 428px) {
+    font-size: 64px;
+    line-height: 110%;
+  }
+}
+
+.desktop-h1,
+h1 {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 110%;
+
+  @media (max-width: 428px) {
+    font-size: 36px;
+    line-height: 100%;
+  }
+}
+
+.desktop-h2,
+h2 {
+  font-family: $third-family;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 100%;
+
+  @media (max-width: 428px) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+
+.desktop-h3,
+h3 {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.desktop-h4-m,
+h4 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.desktop-h4-r {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.body-lg,
+p {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+
+  @media (max-width: 428px) {
+    font-weight: 500;
+  }
+}
+
+.body-md {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.body-sm {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 120%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1381px;
+  margin: auto;
+}
+
+.mob {
+  display: none;
+}
+
+body {
+  background-image: url("../media/bg/main.png");
+  background-position: top center;
+}
+
+header {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-nav__item {
+    padding: 10px;
+
+    display: block;
+  }
+}
+
+
+.hero {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  &::after {
+    content: '';
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(0deg, #070703 57.21%, rgba(7, 7, 3, 0) 100%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-heading {
+    text-align: center;
+
+    span {
+      background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .hero-subheading {
+    max-width: 650px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .hero-form {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 988px;
+    width: 100%;
+    background: rgba(62, 62, 62, 0.9);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    gap: 25px 50px;
+    position: relative;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 50px;
+    left: 322px;
+  }
+
+  .form-label {
+    position: relative;
+
+    &:hover {
+      z-index: 2;
+    }
+
+    &:first-child {
+      grid-column: span 3;
+    }
+
+    .label-top {
+      display: flex;
+      width: 100%;
+      position: relative;
+      margin-top: 10px;
+
+      input {
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        background: #282828;
+      }
+    }
+
+    .label-arrow {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+
+    .label-list {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      border-radius: 10px;
+      padding: 12px 15px;
+      background: #282828;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .button {
+    position: relative;
+    height: fit-content;
+    padding-top: 27px;
+
+    .button-text {
+      position: absolute;
+      top: calc(100% + 5px);
+      width: 100%;
+    }
+
+    button {
+      border-radius: 10px;
+      padding: 12px 30px;
+      background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+      color: #000;
+      width: 100%;
+    }
+  }
+}
+
+.steps {
+  margin-top: 40px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px 10px 25px 25px;
+    background: #141414;
+
+    .top {
+      display: flex;
+      gap: 15px;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 8px 5px;
+        background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+        flex-shrink: 0;
+        width: 34px;
+        height: 34px;
+      }
+    }
+
+    .text {
+      margin-top: 60px;
+    }
+  }
+}
+
+.plusses {
+  margin-top: 140px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 20px;
+  }
+
+  .item {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 10px 25px 30px 10px;
+    height: 254px;
+    background: #282828;
+
+    .num {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: fit-content;
+      gap: 5px;
+
+      &__item {
+        background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+    }
+
+    .texts {
+      margin-top: 40px;
+      padding-left: 15px;
+
+      p {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+.faq {
+  margin-top: 140px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 255px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px 20px;
+    background: #141414;
+    height: fit-content;
+
+    &.active {
+      .answer {
+        max-height: 300px;
+      }
+
+      .icon {
+        transform: rotate(45deg);
+      }
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .icon {
+      transition: all .4s ease;
+      cursor: pointer;
+    }
+
+    .answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: all .4s ease;
+    }
+
+  }
+}
+
+footer {
+  padding-top: 25px;
+  margin-top: 180px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+
+  .container {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .logo {
+    width: 117px;
+    height: 117px;
+    margin-right: 90px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-right: 340px;
+
+    &:last-child {
+      margin-right: 0;
+
+      .row {}
+
+      .item {
+        padding: 0;
+        padding-top: 10px;
+        max-width: 260px;
+      }
+    }
+
+    .telegram {
+      background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+      border-radius: 15px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .item {
+      padding: 10px;
+
+    }
+  }
+
+  .bg {
+    width: 100%;
+    left: 0;
+    margin-bottom: -65px;
+  }
+
+}
+
+
+.telegram.floating {
+  background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+}
