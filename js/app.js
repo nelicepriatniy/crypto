@@ -1,3 +1,4 @@
+new WOW().init();
 const faq_items = document.querySelectorAll('.faq .item');
 
 if (faq_items.length > 0) {
@@ -63,3 +64,21 @@ if (hero_form) {
 
   })
 }
+
+const header_menu = document.querySelector('.mobile-head-menu')
+const header_menu_close = document.querySelectorAll('.mobile-menu-close')
+const header_menu_open = document.querySelectorAll('.header-mob-menu-open')
+
+if (header_menu) {
+  header_menu_close.forEach((el) => {
+    el.onclick = () => {
+      header_menu.classList.remove('active')
+    }
+  })
+  header_menu_open.forEach((el) => {
+    el.onclick = () => {
+      header_menu.classList.add('active')
+    }
+  })
+}
+

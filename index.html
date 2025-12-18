@@ -8,9 +8,37 @@
   <title>Document</title>
   <link rel="stylesheet" href="./style/style.css">
   <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+  <link href=" https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css " rel="stylesheet">
 </head>
 
 <body>
+  <div class="mobile-head-menu mob">
+    <div class="top">
+      <img src="./media/icons/Logo.png" alt="" class="logo">
+      <svg class="mobile-menu-close" width="40" height="40" viewBox="0 0 40 40" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M29.9997 9.99994C29.6872 9.68749 29.2633 9.51196 28.8214 9.51196C28.3794 9.51196 27.9556 9.68749 27.643 9.99994L19.9997 17.6433L12.3564 9.99994C12.0438 9.68749 11.62 9.51196 11.178 9.51196C10.7361 9.51196 10.3122 9.68749 9.9997 9.99994C9.68724 10.3125 9.51172 10.7363 9.51172 11.1783C9.51172 11.6202 9.68724 12.0441 9.9997 12.3566L17.643 19.9999L9.9997 27.6433C9.68724 27.9558 9.51172 28.3797 9.51172 28.8216C9.51172 29.2635 9.68724 29.6874 9.9997 29.9999C10.3122 30.3124 10.7361 30.4879 11.178 30.4879C11.62 30.4879 12.0438 30.3124 12.3564 29.9999L19.9997 22.3566L27.643 29.9999C27.9556 30.3124 28.3794 30.4879 28.8214 30.4879C29.2633 30.4879 29.6872 30.3124 29.9997 29.9999C30.3121 29.6874 30.4877 29.2635 30.4877 28.8216C30.4877 28.3797 30.3121 27.9558 29.9997 27.6433L22.3564 19.9999L29.9997 12.3566C30.3121 12.0441 30.4877 11.6202 30.4877 11.1783C30.4877 10.7363 30.3121 10.3125 29.9997 9.99994Z"
+          fill="white" />
+      </svg>
+    </div>
+    <nav class="menu">
+      <a href="" class="mobile-menu-close body-lg">Обмен</a>
+      <a href="" class="mobile-menu-close body-lg">Порядок обмена</a>
+      <a href="" class="mobile-menu-close body-lg">Частые вопросы</a>
+      <a href="" class="mobile-menu-close body-lg">Правила сайта</a>
+    </nav>
+    <div class="bottom">
+      <p class="text body-lg">Нужна консультация?Напишите нам в Telegram</p>
+      <a href="" class="telegram">
+        <svg width="34" height="28" viewBox="0 0 34 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M29.6112 5.192C29.2002 9.5 27.4272 19.958 26.5242 24.782C26.1432 26.825 25.3902 27.509 24.6612 27.575C23.0802 27.719 21.8772 26.528 20.3442 25.523C17.9472 23.951 16.5912 22.973 14.2632 21.437C11.5722 19.664 13.3152 18.689 14.8512 17.096C15.2502 16.679 22.2252 10.337 22.3602 9.764C22.3782 9.692 22.3932 9.425 22.2342 9.281C22.0752 9.137 21.8382 9.188 21.6702 9.227C21.4302 9.281 17.5992 11.813 10.1772 16.826C9.09124 17.573 8.10424 17.936 7.22224 17.918C6.25024 17.897 4.37824 17.366 2.98624 16.916C1.27924 16.361 -0.076755 16.067 0.040245 15.128C0.103245 14.636 0.778245 14.135 2.06824 13.622C10.0122 10.16 15.3072 7.88 17.9592 6.776C25.5282 3.629 27.1002 3.08 28.1232 3.065C28.3482 3.062 28.8522 3.116 29.1792 3.38C29.4552 3.602 29.5302 3.905 29.5662 4.118C29.6022 4.331 29.6472 4.814 29.6112 5.192Z"
+            fill="#070703" />
+        </svg>
+      </a>
+    </div>
+  </div>
 
   <header>
     <div class="container">
@@ -39,10 +67,13 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1 class="hero-heading"><span>Babushka Exchange</span> — сервис по обмену криптовалют</h1>
-        <p class="hero-subheading desktop-h3 mobile-h2">У нас вы сможете безопасно совершить сделки на любую
+        <h1 class="hero-heading  wow fadeInLeft"><span>Babushka Exchange</span> — <br class="laptop"> сервис по обмену
+          криптовалют</h1>
+        <p class="hero-subheading desktop-h3 mobile-h2  wow fadeInRight" data-wow-delay="0.2s">У нас вы сможете
+          безопасно совершить сделки
+          на любую
           сумму. Приватные условия для комфортного обмена.</p>
-        <form action="" class="hero-form">
+        <form action="" class="hero-form  wow fadeInLeft" data-wow-delay="0.4s">
           <div class="form-label list">
             <p class="body-md label-heading">Ваш город</p>
             <div class="label-top">
@@ -189,8 +220,9 @@
     </section>
     <section class="steps">
       <div class="container">
-        <h2 class="desktop-h1">порядок обмена</h2>
-        <div class="wrapper">
+        <h2 class="desktop-h1 wow fadeInLeft" data-wow-delay="0.6s">порядок обмена</h2>
+        <div class="wrapper  wow fadeInRight" data-wow-delay="0.8s">
+          <h2 class="desktop-h1 laptop">порядок обмена</h2>
           <div class="item">
             <div class="top">
               <div class="icon">
@@ -229,8 +261,8 @@
     </section>
     <section class="plusses">
       <div class="container">
-        <h2 class="desktop-h1">наши преимущества</h2>
-        <div class="wrapper">
+        <h2 class="desktop-h1  wow fadeInLeft">наши преимущества</h2>
+        <div class="wrapper  wow fadeInRight">
           <div class="item">
             <div class="num">
               <div class="num__item"></div>
@@ -311,8 +343,8 @@
     </section>
     <section class="faq">
       <div class="container">
-        <h2 class="desktop-h1">частые вопросы</h2>
-        <div class="wrapper">
+        <h2 class="desktop-h1  wow fadeInLeft">частые вопросы</h2>
+        <div class="wrapper  wow fadeInRight">
           <div class="row">
 
             <div class="item">
@@ -418,7 +450,6 @@
                 показывается до подтверждения операции.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -455,9 +486,9 @@
     </svg>
   </a>
 
-
+  <script src=" https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js "></script>
   <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <script defer src="js/app.js"></script>
 </body>
 
 </html>
