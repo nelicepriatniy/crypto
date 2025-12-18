@@ -821,6 +821,9 @@ footer .bg {
     font-size: 16px;
     line-height: 120%;
   }
+  .hero .button .button-text {
+    top: 0;
+  }
 }
 @media (max-width: 428px) {
   .plusses .item {
