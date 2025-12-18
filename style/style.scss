@@ -809,11 +809,13 @@ footer {
     background: #282828;
     position: fixed;
     z-index: 11;
-    width: 100%;
+    width: calc(100% - 24px);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100px);
     transition: all .4s ease;
+    margin: 12px;
+
 
     &.active {
       opacity: 1;
@@ -966,7 +968,7 @@ footer {
     }
 
     .row {
-      margin-right: 0;
+      margin-right: 100px;
       margin-bottom: 20px;
     }
 
