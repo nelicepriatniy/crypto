@@ -8,12 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let startWidth = 25;
 
-  if (window.innerWidth > 600) {
-    startWidth = 25
-  } else {
-    startWidth = 45
-  }
-
   const endWidth = 100;
   const duration = 2000; // общая длительность анимации (мс)
   const stepTime = 20;   // шаг обновления (мс)
@@ -63,6 +57,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (hero_form) {
     const labels = hero_form.querySelectorAll('.form-label.list')
 
+    const label_from = hero_form.querySelector('.from')
+    const label_to = hero_form.querySelector('.to')
+
+    function changeTo(is_rub) {
+      const label_to_list_items = label_to.querySelectorAll('.label-list__item')
+      if (is_rub) {
+        label_to_list_items.forEach((el) => {
+          if (el.getAttribute('data-v').toLowerCase() == 'rub') {
+            el.style.display = 'none'
+          } else {
+            el.style.display = 'block'
+          }
+        })
+        label_to.querySelector('input').value = 'USDT'
+
+      } else {
+
+        label_to_list_items.forEach((el) => {
+          if (el.getAttribute('data-v').toLowerCase() == 'rub') {
+            el.style.display = 'block'
+          } else {
+            el.style.display = 'none'
+          }
+        })
+        label_to.querySelector('input').value = 'RUB'
+      }
+
+    }
+
     labels.forEach((label) => {
       const input = label.querySelector('input')
       const list_items = label.querySelectorAll('.label-list__item')
@@ -74,6 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
           const list_item_value = list_item.innerText
           input.value = list_item_value
           label.classList.remove('active')
+
+          if (label.classList.contains('from')) {
+            if (list_item.innerText.toLowerCase() == 'rub') {
+              changeTo(true)
+            } else {
+              changeTo(false)
+
+            }
+          }
         }
       })
 
@@ -129,5 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })
   }
+
+
 
 })
