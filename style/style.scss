@@ -584,7 +584,48 @@ footer {
   display: none;
 }
 
-@media (max-width: 1440px) {
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #070703;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all .4s ease;
+
+  &.disable {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .line {
+    background: linear-gradient(90deg, #e39800 0%, #fffb00 100%);
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    width: 10%;
+    justify-content: space-between;
+    transition: all .4s ease;
+    gap: 20px;
+  }
+
+  p {
+    color: black;
+  }
+
+  .nums {
+    display: flex;
+  }
+
+
+}
+
+@media (max-width: 1439px) {
   .laptop {
     display: block;
   }
