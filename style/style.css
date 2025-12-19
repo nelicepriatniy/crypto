@@ -824,6 +824,12 @@ footer .bg {
   .hero .button .button-text {
     top: 0;
   }
+  .hero .hero-bg {
+    height: 450px;
+  }
+  .hero::after {
+    top: 330px;
+  }
 }
 @media (max-width: 428px) {
   .plusses .item {
